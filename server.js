@@ -5,7 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const WebSocket = require("ws");
 
-const CLIENT = "http://192.168.77.193:3000";
+const CLIENT = "http://localhost:3000";
 const MONGODB_ADDRESS = "mongodb+srv://admin:admin@chatify.jayrowv.mongodb.net/?retryWrites=true&w=majority";
 
 const wss = new WebSocket.Server({ port: 8080 });
