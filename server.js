@@ -5,7 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const WebSocket = require("ws");
 
-const CLIENT = "http://localhost:3000";
+const CLIENT = "https://whatsapp-web-client.onrender.com";
 const MONGODB_ADDRESS = "mongodb+srv://admin:admin@chatify.jayrowv.mongodb.net/?retryWrites=true&w=majority";
 
 const server = app.listen(process.env.PORT || 3002);
