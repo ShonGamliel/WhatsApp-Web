@@ -8,7 +8,8 @@ const WebSocket = require("ws");
 const CLIENT = "http://localhost:3000";
 const MONGODB_ADDRESS = "mongodb+srv://admin:admin@chatify.jayrowv.mongodb.net/?retryWrites=true&w=majority";
 
-const wss = new WebSocket.Server({ port: 8080 });
+const server = app.listen(process.env.PORT || 3002);
+const wss = new WebSocket.Server({ server });
 
 mongoose.set("strictQuery", false);
 mongoose
@@ -194,7 +195,7 @@ app.use(
   })
 );
 
-app.listen(3002);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
